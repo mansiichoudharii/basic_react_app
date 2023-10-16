@@ -39,6 +39,9 @@ function App() {
     },
   ]);
 
+  const updateEmployee = () => {
+    console.log("Inside App.js");
+  };
   return (
     <div className="App">
       {showEmployees ? (
@@ -58,6 +61,7 @@ function App() {
                   role={emp.role}
                   img={emp.img}
                   key={uuidv4()}
+                  updateEmployee={updateEmployee}
                 />
               );
             })}
